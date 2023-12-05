@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mangá livre</title>
+</head>
+<body>
+    <!--cabeçalho-->
+    <header>
+        <div class="cabecalho">
+            <a href="../principal/index.html">
+                <div class="logo">
+                    <img src="..\img\uni\logo.png" alt="Algo de errado não está certo">
+                    <h1>Mangá Livre</h1>
+                </div>
+            </a>
+            <div class="interativo">
+                <div class="search">
+                    <input type="text" class="search__input" placeholder="Procurar por...">
+                    <button class="search__button">
+                        <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
+                            <g>
+                                <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+                <div class="menu-btn" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+            </div>
+        </div>    
+    </header>    
+    <!--cabeçalho-->
+
+    <!-- Menu lateral -->
+    <div class="sidebar">
+        <!-- Conteúdo do menu lateral -->
+        <div class="sidebar-header">
+            <img src="..\img\uni\logo.png" alt="Algo de errado não está certo">
+        </div>
+        <ul>
+            <li><a href="../cap/pagina_dos_outros_capitulos.html">Atualizados</a></li>
+            <li><a href="../cap/pagina_dos_outros_capitulos.html">Em Alta</a></li>
+            <li><a href="../cap/pagina_dos_outros_capitulos.html">A-Z</a></li>
+            <li><a href="../cap/pagina_dos_outros_capitulos.html">Favoritos</a></li>
+        </ul>
+        <a href="../login.html"><button class="Btn">
+            <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                
+            <div class="text">Logout</div>
+            </button>
+        </a> 
+    </div>
+    <!-- Menu lateral -->
+
+    <!-- corpo principal-->
+    <div class="principal">
+        <div class="conteudo">
+            <div class="info-manga">
+                <div class="image-container">
+                    <img src="../img/berserk.jpg" alt="Imagem do Manga">
+                    <label class="container">
+                      <input type="checkbox">
+                      <svg id="Layer_1" version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z"></path>
+                      </svg>
+                    </label>
+                </div>
+                <div class="sinopse">
+                    <h1>Berserk</h1>
+                    <div class="rating">
+                        <input value="5" name="rate" id="star5" type="radio">
+                        <label title="text" for="star5"></label>
+                        <input value="4" name="rate" id="star4" type="radio">
+                        <label title="text" for="star4"></label>
+                        <input value="3" name="rate" id="star3" type="radio">
+                        <label title="text" for="star3"></label>
+                        <input value="2" name="rate" id="star2" type="radio">
+                        <label title="text" for="star2"></label>
+                        <input value="1" name="rate" id="star1" type="radio">
+                        <label title="text" for="star1"></label>
+                    </div>
+                    <p><b>Sinopse:</b>A história acompanha Guts e seus amigos encarando as consequências da transformação de Griffith no quinto membro da Mão de Deus, 
+                        Femto. Ao longo do caminho Guts conhece uma bruxa chamada Schierke e descobre a armadura Berserker, tão poderosa que é capaz de 
+                        ameaçar a sanidade de Guts.</p>
+                </div>
+            </div>
+            <div class="botoes">
+                <a href="../cap/pagina_do_primeiro_capitulo.html">
+                    <button id="btnPrimeiroCapitulo">Ir para o Primeiro Capítulo</button>
+                </a>
+                <a href="../cap/pagina_do_ultimo_capitulo.html">
+                    <button id="btnUltimoCapitulo">Ir para o Último Capítulo</button>
+                </a>
+            </div>
+            <div class="lista-capitulos">
+                <ul id="lista-de-capitulos">
+                    <!-- Os itens da lista serão gerados aqui -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- corpo principal-->
+
+    <script>
+        function toggleMenu() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        // Função para marcar como "lido"
+        function marcarComoLido(event) {
+            event.preventDefault(); // Previne o comportamento padrão do link
+            event.target.classList.add('lido'); // Adiciona a classe "lido" ao elemento clicado
+            localStorage.setItem(event.target.textContent.trim(), 'lido'); // Salva no armazenamento local que esse capítulo foi marcado como lido
+            setTimeout(() => {
+                window.location.href = event.target.href; // Redireciona para o link após 500ms (meio segundo)
+            }, 250);
+        }
+        // Obtém a referência da lista onde serão adicionados os elementos
+        const listaDeCapitulos = document.getElementById('lista-de-capitulos');
+
+        // Loop para criar os elementos da lista em ordem decrescente
+        for (let i = 80; i >= 1; i--) {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+
+            if (i === 1) {
+                a.href = '../cap/pagina_do_primeiro_capitulo.html';
+            } else if (i === 80) {
+                a.href = '../cap/pagina_do_ultimo_capitulo.html';
+            } else {
+                a.href = '../cap/pagina_dos_outros_capitulos.html';
+            }
+
+            a.textContent = 'Capítulo ' + i;
+            li.appendChild(a);
+            listaDeCapitulos.appendChild(li);
+
+            // Verifica se o capítulo foi marcado como "lido" e aplica a classe correspondente
+            if (localStorage.getItem('Capítulo ' + i) === 'lido') {
+                a.classList.add('lido');
+            } else {
+                // Adiciona o evento de clique para marcar como "lido" apenas para os capítulos não lidos
+                a.addEventListener('click', marcarComoLido);
+            }
+        }
+        // Limpa o armazenamento local e remove a classe "lido" dos capítulos ao clicar no botão do sidebar
+        document.querySelector('.Btn').addEventListener('click', function() {
+            localStorage.clear();
+            const capitulos = document.querySelectorAll('#lista-de-capitulos li a');
+            capitulos.forEach(capitulo => {
+                capitulo.classList.remove('lido');
+            });
+    });
+    </script>
+</body>
+</html>
