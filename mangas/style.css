@@ -1,0 +1,417 @@
+/*Cabeçalho*/
+body{
+    margin: 0;
+    padding: 0;
+    height: 47.6rem;
+    overflow-x: hidden; /* Para esconder a barra de rolagem horizontal ao abrir o menu */
+  }
+  header h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10px;
+    color: #f0eeee;
+  }
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #644c2d;
+    height: 100px;
+}
+.cabecalho a{
+  text-decoration: none;
+}
+.cabecalho img{
+    margin-left: 20px;
+    height: 100px;
+    width: 100px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.interativo{
+  align-items: center;
+  display: flex;
+}
+.menu-btn {
+  margin-right: 1rem;
+  display: block;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+.menu-btn div {
+  width: 30px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: transform 0.3s ease-in-out;
+}
+/*barra de pesquisa*/
+.search {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    color: #646464;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    width: 20em;
+    transition: all ease-in-out .5s;
+    margin-right: -2rem;
+  }
+  
+  .search__input:hover, .search__input:focus {
+    box-shadow: 0 0 1em #00000013;
+  }
+  
+  .search__input:focus {
+    outline: none;
+    background-color: #f0eeee;
+  }
+  
+  .search__input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #505050;
+  }
+  
+  .search__input:focus + .search__button {
+    background-color: #f0eeee;
+  }
+  
+  .search__button {
+    border: none;
+    background-color: #f4f2f2;
+    margin-top: .1em;
+  }
+  
+  .search__button:hover {
+    cursor: pointer;
+  }
+  
+  .search__icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #505050;
+  }
+/*barra de pesquisa*/
+
+/*Cabeçalho*/
+
+/*menu lateral*/
+.sidebar img{
+  height: 150px;
+  width: 150px;
+}
+.sidebar-header {
+  text-align: center;
+  margin: 0;
+
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -310px; /* Esconde o menu lateral por padrão */
+  width: 310px;
+  height: 100%;
+  background-color: rgba(99, 75, 43);
+  transition: left 0.3s ease-in-out;
+  z-index: 998;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra para efeito visual */
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.content {
+  margin-left: 0; /* Remove o espaço lateral ao início */
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out; /* Adiciona transição para a mudança de margem */
+}
+
+.sidebar.active + .content {
+  margin-left: 250px; /* Desloca o conteúdo para a direita para dar espaço ao menu */
+}
+ul li{
+  list-style: none;
+}
+ul li a{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #f0eeee;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+/*butão*/
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(138, 103, 62)
+}
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: white;
+}
+
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+
+.Btn:hover {
+  width: 155px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+
+.Btn:active {
+  transform: translate(2px ,2px);
+}
+/*butão*/
+
+/*menu lateral*/
+
+/*principal*/
+.principal{
+  display: flex;
+  height: 110.5%;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+}
+.conteudo {
+  width: 80%; /* Largura do conteúdo */
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%; /* Ajuste a margem conforme necessário */
+  margin-top: -10rem; /* Adicione uma margem superior para separar do cabeçalho */
+}
+
+.info-manga {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+.info-manga img {
+  height: 25rem;
+  object-fit: cover; /* Para manter proporções da imagem */
+  margin-right: 20px;
+}
+/*Favorito*/
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  visibility: hidden; /* Inicialmente escondido */
+  transition: visibility 0.3s;
+}
+.container {
+  display: block;
+  position: absolute;
+  top: -15px; /* Ajuste para posicionar corretamente */
+  left: -20px; /* Ajuste para posicionar corretamente */
+  cursor: pointer;
+  user-select: none;
+  z-index: 1; /* Garante que fique sobreposto à imagem */
+}
+.image-container:hover .container input,
+.image-container:hover .container svg {
+  visibility: visible; /* Exibe quando passa o cursor */
+}
+.container svg {
+  height: 60px;
+  width: 60px;
+  transition: all 0.3s;
+  fill: #666;
+  visibility: hidden; /* Inicialmente escondido */
+}
+
+.container svg:hover {
+  transform: scale(1.1);
+}
+
+.container input:checked ~ svg {
+  fill: #E3474F;
+}
+/*Favorito*/
+.sinopse {
+  flex: 1;
+}
+
+.sinopse h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 1rem;
+  font-style: oblique;
+}
+.sinopse p{
+  font-size: large;
+}
+/*estrelas*/
+.rating {
+  display: inline-block;
+  margin: -15px;
+  margin-left: -1px;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  float: right;
+  cursor: pointer;
+  color: #666565;
+  transition: color 0.3s;
+}
+
+.rating label:before {
+  content: '\2605';
+  font-size: 45px;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #cea800;
+  transition: color 0.3s;
+}
+/*estrelas*/
+
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.botoes button {
+  background-color: #644c2d;
+  color: #f0eeee;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.botoes button:hover {
+  background-color: #f0eeee;
+  color: #644c2d;
+}
+
+.lista-capitulos {
+  max-width: 100%;;
+  max-height: 12rem; /* Defina a altura máxima desejada */
+  overflow-y: scroll; /* Adiciona scroll vertical se necessário */
+}
+
+.lista-capitulos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Adicione margem zero para remover espaços extras */
+}
+
+.lista-capitulos li {
+  margin-bottom: 8px;
+  display: block;
+}
+
+.lista-capitulos li a::after {
+  content: 'Não lido'; /* Texto 'Não lido' dentro do componente */
+  display: inline-block;
+  margin-left: 10px; /* Espaço entre o texto do link e o componente */
+  padding: 5px; /* Espaçamento interno do componente */
+  background-color: red; /* Cor de fundo do componente */
+  color: white; /* Cor do texto do componente */
+  border-radius: 5px; /* Borda arredondada do componente */
+  width: 80px; /* Largura do componente */
+  text-align: center; /* Alinhamento do texto dentro do componente */
+}
+
+.lista-capitulos a::after {
+  content: 'Não lido'; /* Texto 'Não lido' dentro do componente */
+  display: inline-block;
+  margin-left: 10px; /* Espaço entre o texto do link e o componente */
+  padding: 5px; /* Espaçamento interno do componente */
+  background-color: red; /* Cor de fundo do componente quando não lido */
+  color: white; /* Cor do texto do componente */
+  border-radius: 5px; /* Borda arredondada do componente */
+  width: 80px; /* Largura do componente */
+  text-align: center; /* Alinhamento do texto dentro do componente */
+}
+
+.lista-capitulos a.lido::after {
+  content: 'Lido'; /* Texto 'Lido' dentro do componente */
+  background-color: green; /* Cor de fundo do componente quando lido */
+}
+
+.lista-capitulos a {
+  text-decoration: none;
+  color: #644c2d; /* Cor inicial do texto */
+  background-color: #f0f0f0; /* Cor inicial do fundo */
+  display: block;
+  padding: 5px;
+  transition: background-color 0.3s, color 0.3s; /* Adiciona transições suaves */
+}
+
+.lista-capitulos a:hover {
+  color: #f0eeee; /* Cor do texto ao passar o mouse */
+  background-color: #644c2d; /* Cor do fundo ao passar o mouse */
+}
+/*principal*/
