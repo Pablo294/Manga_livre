@@ -1,0 +1,120 @@
+/*Cabeçalho*/
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+  header h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10px;
+    color: #f0eeee;
+  }
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #644c2d;
+    height: 100px;
+}
+.cabecalho img{
+    margin-left: 20px;
+    height: 100px;
+    width: 100px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+/* Corpo Principal */
+.principal {
+    display: flex;
+    height: calc(100vh - 100px); /* Ajustando altura, descontando a altura do cabeçalho */
+}
+
+.esquerda {
+    width: calc(100% - 400px); /* Calcula o restante da largura da tela após descontar os 400px da div direita */
+    background-color: #f0f0f0;
+    /* Configuração do GIF como plano de fundo */
+    background-image: url('../Mangalivre/img/uni/kuru-kuru-kururin.gif');
+    background-size: cover; /* Cobrir toda a área */
+    background-repeat: no-repeat; /* Evitar repetição */
+    background-position: center; /* Centralizar o GIF */
+}
+
+.direita {
+    width: 400px; /* Largura fixa de 400px */
+    background-color: #ccc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cadastro {
+    margin: 0%;
+    height: 85%;
+    width: 100%;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #644c2d9f;
+    
+}
+.cadastre-link {
+    color: blue;
+    text-decoration: none;
+}
+
+.cadastre-link:hover {
+    text-decoration: underline;
+}
+.search {
+    height: 80%; /* 80% da altura da div cadastro */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #85653c9f;
+}
+.direita h1 {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.input-container {
+    margin-bottom: 15px; /* Espaço entre os campos */
+}
+
+.input-container label {
+    display: block; /* Coloca os labels em uma nova linha */
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.input-container input {
+    width: 100%; /* Ocupa todo o espaço disponível */
+    padding: 8px; /* Espaçamento interno */
+    margin-top: 5px; /* Espaçamento superior */
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #644c2d;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+/* CSS para alterar as cores quando o mouse passa por cima do botão */
+button:hover {
+    background-color: #fff;
+    color: #555;
+}
+
+
+

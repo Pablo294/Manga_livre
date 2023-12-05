@@ -1,0 +1,53 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.fullscreen-gif {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.fullscreen-gif h1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    font-size: 34px;
+    color: white;
+    text-align: center;
+}
+
+/* O gif de plano de fundo */
+body {
+    background-image: url('../img/uni/kuru-kuru-kururin.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#changing-text, #link-home {
+    animation: changeColor 2s infinite;
+}
+
+@keyframes changeColor {
+    0% {
+        color: red;
+    }
+    25% {
+        color: blue;
+    }
+    50% {
+        color: green;
+    }
+    75% {
+        color: orange;
+    }
+    100% {
+        color: purple;
+    }
+}
+
